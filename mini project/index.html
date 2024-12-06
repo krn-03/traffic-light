@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{
+        text-align: center;
+        
+    }
+    #box{
+      height: 199px;
+      width: 199px;
+      background-color: #bbb;
+      border-radius: 50%;
+    }
+    .parent{
+      display: flex;
+      height: 100vh;
+      background-color: aliceblue;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Traffic Light</h1>
+
+  <div class="parent">
+    <div id="box"></div>
+  </div>
+  <script>
+    const trafficLight=()=>{
+        let trafficLight=document.getElementById('box')
+
+        trafficLight.addEventListener("mouseenter",()=>{
+            trafficLight.style.background="red"
+        })
+
+        trafficLight.addEventListener("click",()=>{
+            trafficLight.style.background="yellow"
+        })
+
+        trafficLight.addEventListener("dblclick",()=>{
+            trafficLight.style.background="green"
+        })
+
+    }
+    trafficLight()
+  </script>
+</body>
+</html>
